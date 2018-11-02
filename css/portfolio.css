@@ -1,0 +1,263 @@
+.ourjob {
+	padding: 50px 0;
+	background: #F0F4F5;
+	min-height: 900px;
+}
+.ourjob-title {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 50px;
+}
+.main-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.main-gallery:after {
+	content: '';
+	display: flex;
+	width: 32%;
+}
+.mg-preview {
+	position: relative;
+	width: 32%;
+	height: auto;
+	max-height: 300px;
+	text-align: center;
+	position: relative;
+	border: 5px solid #fff;
+	box-sizing: content-box;
+	margin-bottom: 50px;
+}
+.mg-preview:after {
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left:5%;
+	width: 90%;
+	border-bottom: 2px dashed rgba(0,167,255, .5);
+}
+.mg-preview_image {
+	width:100%;
+	height: 300px;
+	object-fit: cover;
+}
+.mg-preview_caption {
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	min-height: 55px;
+	background: rgba(0,167,255, .5);
+	color: #fff; font-variant: small-caps;
+}
+.mg-preview_link {
+	text-align: right;
+}
+.mg-preview_link {
+	background: rgba(255,255,255,.3);
+	position: absolute;
+	width: 100%; height: 100%;
+	top:0; left:0;
+	z-index: 30;
+	opacity: 0;
+	transition: all .5s;
+}
+.mg-preview_count {
+	position: absolute;
+	font-size: 46px;
+	color:#00A7FF;
+	z-index: 20;
+	font-family: 'Ubuntu', sans-serif;
+	top:50%; left:43%;
+	transform: translate(-50%, -50%);
+}
+.mg-preview_count:after {
+	content: '';
+	position: absolute;
+	top:10px; right: -60px;
+	width: 50px; height: 36px;
+	background: url(../img/eye-icon.png);
+}
+.mg-preview_link:hover {
+	opacity: 1;
+}
+.mg-btn {
+	cursor: pointer;
+	display: block;
+	border:3px solid #00A7FF;
+	text-transform: uppercase;
+	color:#00A7FF;
+	padding: 5px 15px;
+}
+.main-footer {
+	background: #fff;
+}
+.ourjob-desc {
+	text-align: right;
+	font-size: 16px;
+}
+.porcur {
+	padding: 50px 0;
+	background: #F0F4F5;
+}
+.porcur-title {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.bread-list {
+	margin-bottom: 20px;
+}
+.bread-item {
+	display: inline-block;
+	position: relative;
+	margin-right: 20px;
+}
+.bread-item:after {
+	content: '-';
+	position: absolute;
+	right: -13px;
+	top:7px; font-size: 12px;
+	color: #a8a8a8;
+}
+.bread-item:last-child:after {
+	display: none;
+}
+.bread-link {
+	font-size: 12px;
+	color: #a8a8a8;
+	text-decoration: underline;
+}
+.bread-link:hover {
+	color:#00A7FF;
+}
+.porcur-about {
+	margin-left: 25px;
+}
+.porcur-about_text {
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: 700;
+}
+.porcur-list {
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.pa-span {
+	font-weight: 300;
+}
+.porcur-item {
+	position: relative;
+	padding-left: 20px;
+	font-size: 16px;
+	font-weight: 300;
+}
+.porcur-item:after {
+	content: '-';
+	position: absolute;
+	left: 5px; top:-1px;
+}
+.gallerycur {
+	margin-bottom: 20px;
+}
+.big-cur {
+	display: block;
+	margin: 20px auto;
+	max-width: 700px;
+	height: 500px;
+	overflow: hidden;
+	box-shadow: 0 0 5px #00A7FF;
+	background: #a8a8a8;
+}
+.gallerycur-title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+}
+.big-cur_image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: block;
+}
+.gallery-image {
+	width:166px;
+	height: 110px;
+	object-fit: cover;
+	cursor: pointer;
+}
+.gallery-list {
+	max-width: 700px;
+	margin: 0 auto;
+}
+.gallery-item {
+	margin:0 5px 5px 0;
+	display: inline-block;
+}
+.gallery-item:nth-child(4n+4) {
+	margin-right: 0;
+}
+.gallery-active {
+	border:2px solid #00A7FF;
+	opacity: 0.7;
+}
+@media all and (max-width: 960px) {
+	.mg-preview {
+		width: 47%;
+	}
+	.main-gallery:after {
+		content: '';
+		display: flex;
+		width: 47%;
+	}
+}
+@media all and (max-width: 620px) {
+	.mg-preview {
+		width: 90%;
+	}
+	.main-gallery:after {
+		display: none;
+	}
+	.ourjob-desc {
+		font-size: 14px;
+	}
+	.ourjob-desc a {
+		font-size: 14px;
+	}
+	.gallery-list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.gallery-item {
+		width: 45%;
+	}
+	.gallery-image {
+		width: 100%;
+		height: 130px;
+	}
+	.big-cur {
+		height: 350px;
+	}
+}
+@media all and (max-width: 420px) {
+	.mg-preview_image {
+		height: 240px;
+	}
+	.mg-preview {
+		max-height: 240px;
+	}
+	.ourjob-title {
+		font-size: 28px;
+	}
+	.bread-item {
+		margin-right: 10px;
+	}
+	.bread-item:after {
+		right: -8px;
+	}
+	.big-cur {
+		height: 300px;
+	}
+}

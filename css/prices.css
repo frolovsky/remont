@@ -1,0 +1,370 @@
+main {
+	min-height: 85vh;
+}
+.main-prices {
+	margin-bottom: 200px;
+	overflow: hidden;
+}
+.bread-item {
+	display: inline-block;
+	position: relative;
+	margin-right: 20px;
+}
+.bread-item:after {
+	content: '-';
+	position: absolute;
+	right: -13px;
+	top:7px; font-size: 12px;
+	color: #a8a8a8;
+}
+.bread-item:last-child:after {
+	display: none;
+}
+.bread-link {
+	font-size: 12px;
+	color: #a8a8a8;
+	text-decoration: underline;
+}
+.bread-link:hover {
+	color:#00A7FF;
+}
+.main-prices {
+	padding-top: 10px;
+}
+.prices-download {
+	color: #999999;
+	text-decoration: underline;
+	position: relative;
+	left: 50px;
+}
+.prices-download:after {
+	content: '';
+	position: absolute;
+	left: -50px; top:-10px;
+	width: 48px; height: 48px;
+	background: url(../img/excel.png);
+	transform: scale(.7);
+}
+.prices_title, .price-calc_title {
+	text-align: center;
+	font-size: 36px;
+	color: #141414;
+	margin-bottom: 30px;
+}
+.price-calc_title {
+	font-size: 24px;
+	padding-top: 20px;
+}
+.prices-list {
+	margin: 50px auto 20px auto;
+}
+.prices-open {
+	cursor: pointer;
+	padding: 10px 20px;
+	background: #00A7FF;
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	left: 50px;
+}
+.prices-open:after {
+	content: '«';
+	position: absolute;
+	left:-30px; top:8px;
+	color: #00A7FF; font-weight: bold;
+	width: 30px; height: 30px;
+	font-size: 30px;
+	line-height: 18px;
+	text-align: center;
+	transform: rotate(-90deg);
+	transition: all .3s;
+}
+.prices-vis:after {
+	transform: rotate(90deg);
+	left: -32px;
+	color: #aeaeae;
+}
+.prices-table {
+	margin-top: 30px;
+	width: 100%;
+	border-collapse: collapse;
+	display: table;
+}
+.prices-table_title {
+	margin-bottom: 20px;
+}
+th {
+	text-align: center;
+	border:1px solid #a8a8a8;
+	border-collapse: collapse;
+}
+td {
+	text-align: center;
+	border:1px solid #a8a8a8;
+	padding: 5px 0;
+	font-size: 14px;
+}
+tbody, tr, tfoot {
+	border: 1px solid #a8a8a8;
+}
+tr td:first-child {
+	font-weight: 700;
+}
+.td-amont {
+	text-align: left;
+	font-size: 18px;
+}
+.calc-input {
+	border-bottom: 1px dashed rgba(0,167,255, .3);
+	margin: 0 10px;
+	text-align: center;
+	font-weight: bold;
+}
+.td-name {
+	text-align: left;
+	padding-left: 10px;
+}
+.th-unit {
+	width: 150px;
+}
+.th-price {
+	width: 100px;
+}
+.th-num {
+	width: 50px;
+}
+.th-sum, .td-sum, .calc-input, .th-total, .td-total {
+	width: 100px;
+}
+.calc-input, .local-out {
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	color: #141414;
+}
+.local-out {
+	font-size: 18px;
+}
+.th-section {
+	text-align: left;
+	text-indent: 20px;
+	padding: 10px;
+	text-transform: uppercase;
+	color: #999999;
+	position: relative;
+	cursor: pointer;
+}
+.th-section:after {
+	content: '+';
+	position: absolute;
+	left:5px;
+	text-indent: 0;
+	padding: 0;
+	top:15px;
+	border:1px solid #999999;
+	width: 15px; height: 15px;
+	line-height: 14px;
+	font-size: 15px;
+	text-align: center;
+}
+.th-section:before {
+	content: attr(data-lp);
+	position: absolute;
+	right: 15px;
+	text-indent: 0;
+	color:#00A7FF;
+	padding: 0;
+	top:16px;
+	line-height: 14px;
+	font-size: 15px;
+	text-align: center;
+}
+.th-section-active:before {
+	color:#fff;
+}
+.th-section-active {
+	background: #00A7FF;
+	color: #fff;
+}
+.th-section-active:after {
+	content: '-';
+	line-height: 11px;
+	border-color: #fff;
+}
+.min-up {
+	font-size: 10px;
+	position: relative;
+	top: -7px;
+}
+.th-lastup {
+	background: #F0F4F5;
+	color: #141414;
+	text-align: right;
+	padding: 5px 10px;
+}
+.table-section {
+	display: none;
+}
+.table-header {
+}
+.price-calc_desc {
+	margin-bottom: 30px;
+	text-indent: 15px;
+}
+.out-full {
+	position: fixed;
+	z-index: 400;
+	right: 0;
+	bottom: 100px;
+	border:3px solid #00A7FF;
+	border-right: none;
+	padding: 20px;
+	text-align: center;
+	background: #fff;
+	transition: all .5s;
+	transform: translateX(0px);
+}
+.out-full_text {
+	color:#141414;
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 16px;
+}
+.out-full_sum {
+	font-size: 14px; 
+}
+.out-full_sum span {
+	font-size: 22px;
+	color: #00A7FF;
+	font-weight: bold;
+}
+.price-calc {
+	margin-bottom: 50px;
+}
+.sc-form {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	padding: 20px 10px;
+	border:3px solid #00A7FF;
+}
+.scf-select, .scf-input {
+	padding: 5px 10px;
+	width: 100%;
+	background: rgba(0,0,0,.1);
+	text-align: center;
+	font-weight: 700;
+}
+.scf-input {
+	max-width: 80px;
+	margin: 0 auto;
+	display: block;
+}
+.sc-title {
+	font-weight: 700;
+}
+.scf-label {
+	display: block;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.scf-output {
+	font-size: 22px;
+	color: #00A7FF;
+	font-weight: bold;
+}
+@media all and (max-width: 1060px) {
+	.out-full {
+		bottom: 20px;
+	}
+}
+@media all and (max-width: 800px) {
+	.th-num {
+		width: 25px;
+	}
+	th {
+		font-size: 16px;
+	}
+	.th-unit, .th-amount, .calc-input, .th-total, .td-total {
+		width: 70px;
+	}
+	.out-full_text {
+		display: none;
+	}
+	.out-full {
+		min-width: 150px;
+	}
+	.prices_title {
+		font-size: 28px;
+	}
+	.prices-download {
+		font-size: 14px;
+		left:40px;
+	}
+	.prices-download:after {
+		transform: scale(.5);
+		top:-12px;
+		left:-40px;
+	}
+	.price-calc_title {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.sc-form {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.scf-block {
+		width: 80%;
+		margin-bottom: 30px;
+	}
+	.scf-block:last-child {
+		margin-bottom: 0;
+	}
+	.scf-text {
+		text-align: right;
+	}
+	.scf-select {
+		max-width: 300px;
+		margin: 0 auto;
+		display: block;
+	}
+}
+@media all and (max-width: 500px) {
+	.main-prices {
+		overflow: visible;
+	}
+	.prices-table {
+		min-width: 490px;
+	}
+	.th-unit, .th-amount, .calc-input, .th-total, .td-total, .th-price {
+		width: 45px;
+	}
+	.table-header th {
+		font-size: 14px;
+		padding: 0 4px;
+	}
+	.th-section:before {
+		right: 5px;
+	}
+	.out-full {
+		padding: 5px 20px;
+	}
+	.prices-download {
+		font-size: 14px;
+		left:0px;
+		padding-left: 40px;
+		display: block;
+	}
+	.prices-download:after {
+		transform: scale(.5);
+		top:-12px;
+		left:0px;
+	}
+}
+@media all and (max-width: 380px) {
+	.prices_title {
+		font-size: 24px;
+	}
+}

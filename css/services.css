@@ -1,0 +1,238 @@
+.prices {
+	background: #F0F4F5;
+	padding:70px 0 50px 0;
+}
+.prices_title {
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 50px;
+	color:#545454;
+}
+.list-tab {
+	background: rgba(255,255,255,.6);
+	margin: 0 0 20px 60px;
+	padding: 5px 15px;
+	width: 65%;
+	min-width: 500px;
+	cursor: pointer;
+	position: relative;
+}
+.list-tab:after {
+	content: '«';
+	position: absolute;
+	left:-30px; top:5px;
+	color: #a8a8a8; font-weight: bold;
+	width: 30px; height: 30px;
+	font-size: 30px;
+	line-height: 18px;
+	text-align: center;
+	transform: rotate(-90deg);
+	transition: all .3s;
+}
+.visible {
+	cursor: default;
+}
+.visible .list-tab_name {
+	cursor: pointer;
+}
+.visible:after {
+	transform: rotate(90deg);
+	left:-34px;
+	color:rgba(96,99,217, .6);
+	cursor: pointer;
+}
+.list-tab_name {
+	color: #777777;
+	font-size: 22px;
+	display: block;
+	width: 100%;
+	min-height: 30px;
+	position: relative;
+}
+.list-tab_name:after {
+	content: '';
+	height: 38px; width: 30px;
+	left:-50px; top: -4px;
+	position: absolute;
+	background: transparent;
+	z-index: 5;
+}
+.services-list {
+	padding: 20px 0;
+	width: 100%;
+}
+.services-item {
+	width: 100%;
+}
+.services-link {
+	display: block;
+	width: 100%;
+	padding-left:30px;
+	font-variant: small-caps;
+	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+	color: #6063d9;
+	transition: all .5s;
+}
+.services-link:hover {
+	background: rgba(0,0,0,.05);
+}
+.services-item_desc {
+	padding-top: 40px;
+}
+.sid-text {
+	text-indent: 10px;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.mini-gallery {
+	margin:0 10px;
+	float:right;
+	position: relative;
+	width: 25%;
+	overflow: hidden;
+}
+.prices .container:after {
+	content: '';
+	display: block;
+	clear:both;
+}
+.gallery-item {
+	margin-bottom: 25px;
+}
+.gallery-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border:3px solid rgba(0,167,255,.3);
+	outline:5px solid rgba(255,255,255,.7);
+	outline-offset: -15px;
+	transition: all .5s;
+	cursor: zoom-in;
+}
+.gallery-image:hover {
+	border:3px solid rgba(0,167,255,1);
+	outline:5px solid rgba(255,255,255,1);
+}
+.gallery-item_desc {
+	text-align: center;
+	font-size: 16px;
+	border-bottom: 1px dashed #a8a8a8;
+}
+.gallery-item_info {
+	padding: 0 10px;
+	font-size: 14px;
+}
+.gallery-item_srok {
+	float:right;
+}
+/* recomend section */
+
+.recomend {
+	background: #fff;
+	padding: 50px 0;
+}
+.recomend-title {
+	text-align: center;
+	font-size: 32px;
+	color:#545454;
+	margin-bottom: 30px;
+}
+.recomend-text {
+	text-indent: 20px;
+	font-size: 16px;
+}
+
+.overlay {
+	display: none;
+	top:0; left: 0;
+	position: fixed;
+	background: rgba(0,0,0,.4);
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	z-index: 100;
+	cursor: pointer;
+}
+.modal-image {
+	position: fixed;
+	display: none;
+	top:50%; left:50%;
+	transform: translate(-50%, -50%);
+	width: 80%; height: 80%;
+	max-height: 540px;
+	max-width: 960px;
+	z-index: 200;
+	overflow:hidden;
+}
+.big-image {
+	display: none;
+	max-width: none;
+	min-width: auto;
+	min-height: auto;
+	height: 100%;
+	position: absolute;
+	top:50%; left:50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 30px rgba(0,167,255,.5);
+}
+@media all and (max-width: 860px) {
+	.mini-gallery {
+		float:none;
+		margin:20px auto;
+		width: 90%;
+	}
+	.gallery-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	.gallery-item {
+		width: 32%;
+	}
+	.prices .container {
+		display: flex;
+		flex-direction: column;
+	}
+	.list-tab {
+		order:-1;
+		margin: 0 20px 20px 30px;
+		min-width: none;
+		width: 90%;
+	}
+	.gallery-image {
+		height: 150px;
+	}
+}
+@media all and (max-width: 680px) {
+	.gallery-list {
+		flex-direction: column;
+		align-items: center;
+	}
+	.gallery-item {
+		min-width: 300px;
+		width: 100%;
+	}
+	.gallery-image {
+		height: auto;
+		object-fit: contain;
+		cursor: default;
+	}
+	.list-tab {
+		min-width: auto;
+	}
+	.prices_title {
+		font-size: 22px;
+	}
+	.mini-gallery {
+		margin: 10px auto;
+		overflow: visible;
+		width: 100%;
+	}
+	.services-link {
+		margin-bottom: 5px;
+		padding-left: 5px;
+		text-indent: 5px;
+	}
+}

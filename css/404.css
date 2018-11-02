@@ -1,0 +1,38 @@
+.err-msg {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 28px;
+}
+.err-list {
+	margin-top: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.err-list li{
+	width: 25%;
+	padding:0 5px;
+}
+
+.err-list img {
+	max-width: 600px;
+	width: 100%;
+	height: auto;
+}
+@media all and (max-width: 760px) {
+	.err-list li{
+		width: 50%;
+	}
+	.err-list {
+		padding-bottom: 100px;
+	}
+	.err-msg {
+		font-size: 22px;
+	}
+}
+@media all and (max-width: 420px) {
+	.err-list li{
+		width: 98%;
+	}
+
+}
